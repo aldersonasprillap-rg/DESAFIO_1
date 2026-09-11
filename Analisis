@@ -1,0 +1,5 @@
+Análisis
+Principal mente se debe implementar una solución para el juego Sweet Crush utilizando C++, aplicando manipulación directa de bits y gestión de memoria dinámica.
+El problema principal consiste en implementar un juego similar a Sweet Crush, en este proyecto cada ficha debe ocupar únicamente tres bits. Por esta razón, el tablero se trabajarán las configuraciones de las filas, columnas y fichas y los bits agrupados dentro de bytes de memoria. Esto representa uno de los aspectos más importantes del proyecto, ya que se debe estar manipulando continuamente las posiciones de las fichas.
+Y se debe tener en cuenta, si una ficha ocupa tres bits y se encuentra ubicada cerca del final de un byte, parte de sus bits pueden estar almacenados en ese byte y los bits restantes en el siguiente.  Por esta razón, es necesario plantear una estrategia que permitiera determinar, para cualquier posición (fila, columna), la ubicación exacta de sus tres bits dentro de la memoria.
+
