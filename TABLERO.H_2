@@ -1,0 +1,31 @@
+#ifndef TABLERO_H
+#define TABLERO_H
+
+void crearTablero(unsigned char *&tablero, int filas, int columnas, int &bytesMemoria);
+void liberarTablero(unsigned char *&tablero, int &bytesMemoria);
+
+int obtenerFicha(unsigned char *tablero, int posicion);
+void cambiarFicha(unsigned char *tablero, int posicion, int ficha);
+
+void mostrarTablero(unsigned char *tablero, int filas, int columnas);
+void mostrarBinario(unsigned char *tablero, int filas, int columnas);
+
+void llenarTableroSinCombinaciones(unsigned char *tablero, int filas, int columnas);
+bool detectarYEliminarCombinaciones(unsigned char *tablero, int filas, int columnas,
+                                    int &fichasEliminadas, int &combinaciones);
+void aplicarGravedad(unsigned char *tablero, int filas, int columnas);
+void rellenarEspaciosVacios(unsigned char *tablero, int filas, int columnas);
+
+bool intercambiarFichas(unsigned char *tablero, int filas, int columnas,
+                        int f1, int c1, int f2, int c2,
+                        int &fichasEliminadas, int &combinaciones, int &cascadas);
+
+void procesarCascada(unsigned char *tablero, int filas, int columnas,
+                     int &fichasEliminadas, int &combinaciones, int &cascadas);
+
+bool agregarFila(unsigned char *&tablero, int &filas, int columnas, int donde, int &bytesMemoria);
+bool eliminarFila(unsigned char *&tablero, int &filas, int columnas, int donde, int &bytesMemoria);
+bool agregarColumna(unsigned char *&tablero, int filas, int &columnas, int donde, int &bytesMemoria);
+bool eliminarColumna(unsigned char *&tablero, int filas, int &columnas, int donde, int &bytesMemoria);
+
+#endif
